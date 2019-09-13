@@ -8,7 +8,7 @@
       "program": "${workspaceFolder}/bin/mdel.js",
       "env": {
         "NODE_ENV": "development",
-        "MDEL_MATCH": "fr:*"
+        "MDEL_MATCH": "rx:*"
       }
     },
     {
@@ -18,7 +18,9 @@
       "program": "${workspaceFolder}/lib/server",
       "outputCapture": "std",
       "env": {
-        "NODE_ENV": "development"
+        "NODE_ENV": "development",
+        "MQTT_USERNAME": "test",
+        "MQTT_PASSWORD": "test"
       }
     }
   ]

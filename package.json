@@ -23,9 +23,11 @@
     "nodemon": "^1.19.1"
   },
   "dependencies": {
+    "async-mqtt": "^2.4.2",
     "config": "^3.2.2",
     "ioredis": "^4.14.0",
     "lodash": "^4.17.15",
+    "pino": "^5.13.2",
     "pino-pretty": "^3.2.0"
   }
 }

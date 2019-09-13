@@ -2,9 +2,8 @@
 
 Microservice for MQTT ingress into Redis streams.
 
-`rx` prefix: the stack includes Redis streams
-
-`mlk` postfix: named in honour of MLK
+- `rx` - the stack includes Redis streams
+- `mlk` - named in honour of MLK
 
 ## Design
 
