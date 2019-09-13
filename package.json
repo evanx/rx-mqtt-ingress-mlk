@@ -1,7 +1,7 @@
 {
-  "name": "frx-sync-mlk",
+  "name": "rx-mqtt-ingress-mlk",
   "version": "0.1.0",
-  "description": "HTTP microservice to POST to Redis stream",
+  "description": "Microservice for MQTT ingress into Redis streams.",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -10,10 +10,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:evanx/frx-sync-mlk.git"
+    "url": "git@github.com:evanx/rx-mqtt-ingress-mlk.git"
   },
   "keywords": [
-    "Fastify",
     "Redis",
     "Redis streams"
   ],
@@ -25,13 +24,8 @@
   },
   "dependencies": {
     "config": "^3.2.2",
-    "fastify": "^2.7.1",
-    "fastify-bearer-auth": "^4.2.0",
-    "fastify-formbody": "^3.1.0",
-    "fastify-redis": "^3.1.1",
     "ioredis": "^4.14.0",
     "lodash": "^4.17.15",
-    "node-fetch": "^2.6.0",
     "pino-pretty": "^3.2.0"
   }
 }
