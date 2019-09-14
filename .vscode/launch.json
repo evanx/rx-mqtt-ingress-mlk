@@ -8,19 +8,20 @@
       "program": "${workspaceFolder}/bin/mdel.js",
       "env": {
         "NODE_ENV": "development",
-        "MDEL_MATCH": "rx:*"
+        "MDEL_MATCH": "mr:*"
       }
     },
     {
       "type": "node",
       "request": "launch",
-      "name": "server",
-      "program": "${workspaceFolder}/lib/server",
+      "name": "main",
+      "program": "${workspaceFolder}/lib/main",
       "outputCapture": "std",
       "env": {
         "NODE_ENV": "development",
-        "MQTT_USERNAME": "test",
-        "MQTT_PASSWORD": "test"
+        "USERNAME": "test",
+        "PASSWORD": "test",
+        "TOPIC": "test"
       }
     }
   ]

@@ -1,5 +1,5 @@
 module.exports = {
-  port: 3000,
+  maxlen: 9999,
   broker: {
     protocol: 'mqtts',
     host: 'localhost',

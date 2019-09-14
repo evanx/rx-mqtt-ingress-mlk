@@ -2,11 +2,11 @@
   "name": "rx-mqtt-ingress-mlk",
   "version": "0.1.0",
   "description": "Microservice for MQTT ingress into Redis streams.",
-  "main": "index.js",
+  "main": "lib/main.js",
   "scripts": {
     "test": "jest",
-    "start": "node lib/server",
-    "start:dev": "NODE_ENV=development node lib/server"
+    "start": "node lib/main",
+    "start:dev": "NODE_ENV=development node lib/main"
   },
   "repository": {
     "type": "git",
@@ -25,8 +25,7 @@
   "dependencies": {
     "async-mqtt": "^2.4.2",
     "config": "^3.2.2",
-    "ioredis": "^4.14.0",
-    "lodash": "^4.17.15",
+    "ioredis": "^4.14.1",
     "pino": "^5.13.2",
     "pino-pretty": "^3.2.0"
   }
