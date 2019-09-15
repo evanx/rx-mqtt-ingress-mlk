@@ -18,10 +18,7 @@
       "program": "${workspaceFolder}/lib/main",
       "outputCapture": "std",
       "env": {
-        "NODE_ENV": "development",
-        "USERNAME": "test",
-        "PASSWORD": "test",
-        "TOPIC": "test"
+        "NODE_ENV": "development"
       }
     }
   ]

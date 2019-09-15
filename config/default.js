@@ -5,6 +5,7 @@ module.exports = {
     host: 'localhost',
     port: 8883,
     rejectUnauthorized: false,
+    reconnectPeriod: 4000,
   },
   logger: {
     level: 'info',

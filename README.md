@@ -3,7 +3,7 @@
 Microservice for MQTT ingress into Redis streams.
 
 - `rx` - the stack includes Redis streams
-- `mlk` - named in honour of MLK
+- `mlk` - suite named in honour of MLK
 
 ## config
 
@@ -29,7 +29,6 @@ module.exports = {
 ```
 
 - `maxlen` - limit the size of the stream.
-- `subscribeTopic` - the topic to which to subscribe and push into the stream
 
 ### env
 
@@ -37,10 +36,31 @@ A further environment variable is the MQTT `PASSWORD.` It is not included in `cu
 
 ```javascript
 module.exports = {
+  maxlen: 'MAXLEN',
   broker: {
     username: 'USERNAME',
   },
   subscribeTopic: 'TOPIC',
-  maxlen: 'MAXLEN',
 }
+```
+
+- `subscribeTopic` - the topic to which to subscribe and push into the stream
+
+## Implementation
+
+https://github.com/evanx/rx-mqtt-ingress-mlk/blob/master/lib/main.js
+
+```javascript
+mqtt.on('connect', () => mqtt.subscribe(config.subscribeTopic))
+mqtt.on('message', (topic, message) =>
+  redis.xadd(
+    `topic:${topic}:x`,
+    'maxlen',
+    '~',
+    config.maxlen,
+    '*',
+    'message',
+    message.toString(),
+  ),
+)
 ```

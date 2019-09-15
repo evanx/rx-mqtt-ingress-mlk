@@ -7,6 +7,6 @@ fi
 
 redis-cli del mr:topic:test:x
 
-PASSWORD=test node lib/main.js
+PASSWORD=test TOPIC=test node lib/main.js
 
 redis-cli xrange mr:topic:test:x - +
