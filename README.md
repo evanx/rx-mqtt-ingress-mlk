@@ -32,7 +32,7 @@ module.exports = {
 
 ### env
 
-A further environment variable is the MQTT `PASSWORD.` It is not included in `custom-environment-variables.js` as `config` is logged at startup.
+A further environment variable is the MQTT `PASSWORD.` It is not included in `custom-environment-variables` so that `config` can be safely logged out at startup.
 
 ```javascript
 module.exports = {
